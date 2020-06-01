@@ -1,0 +1,6 @@
+{
+  "mongoURI": "mongodb+srv://ensah:ensah@devconnector-uw2qy.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken",
+  "githubClienctId": "5c566345f007491f58ee",
+  "githubSecret": "55247c618b2a55e64a7b716628fe5a28bad2485f"
+}
