@@ -11,7 +11,7 @@ const Execute_python = () => {
       <li className="item">
         <Card className="item__content">
           <div className="item_img">
-            <img class="logo" src="https://image.freepik.com/free-vector/attendance-concept-businessman-holding-checklist-vector-flat-design_149152-172.jpg" alt="logo"/>
+            <img class="logo" src="https://thumbs.gfycat.com/HeftyDescriptiveChimneyswift-size_restricted.gif" alt="logo"/>
           </div>
           <div className="item_info">
             <h2>Recognize / Attendance</h2>  
@@ -45,7 +45,7 @@ const Execute_python = () => {
       <li className="item">
         <Card className="item__content">
           <div className="item_img">
-            <img class="logo" src="https://www.unite.ai/wp-content/uploads/2019/12/Typical_cnn-1.png" alt="logo"/>
+            <img class="logo" src="https://thumbs.gfycat.com/UnsteadyUnkemptKangaroo-size_restricted.gif" alt="logo"/>
           </div>
           <div className="item_info">
             <h2>Train Images</h2>  
@@ -61,7 +61,7 @@ const Execute_python = () => {
       <li className="item">
         <Card className="item__content">
           <div className="item_img">
-            <img class="logo" src="https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/6538357/original/Email-Icon/send-you-an-auto-email-script-and-list-of-500k-fresh-emails.jpg" alt="logo"/>
+            <img class="logo" src="https://thumbs.gfycat.com/FloweryHandsomeCuckoo-small.gif" alt="logo"/>
           </div>
           <div className="item_info">
             <h2>Auto Mail</h2>  

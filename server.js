@@ -59,7 +59,7 @@ function callName_pfa_train(req, res) {
   console.log("execute function");
   var spawn = require("child_process").spawn;
   var process = spawn("python", [
-    "./pfa_train images.py",
+    "./pfa_train_images.py",
     //req.query.firstname,
     //req.query.lastname,
   ]);

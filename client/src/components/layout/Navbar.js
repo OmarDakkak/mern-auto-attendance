@@ -12,7 +12,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
       </li> */}
 
       <li>
-        <Link to='/Execute_python'>face recognition</Link>
+        <Link to='/Execute_python'>Functionalities</Link>
       </li>
 
       <li>

@@ -1,7 +1,8 @@
+import sys
 import yagmail
 import os
 print("sending email.....")
-receiver = "abdelfettah.hajjioui@gmail.com"  # receiver email address
+receiver = "omardakkak98@gmail.com"  # receiver email address
 body = "Attendence File"  # email body
 filename = "Attendance"+os.sep+"Attendance_2020-03-12_16-18-57.csv"  # attach the file
 
