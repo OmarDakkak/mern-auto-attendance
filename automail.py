@@ -1,26 +1,48 @@
-import yagmail
+import smtplib
 import glob
 import os
-print("sending email.....")
-receiver = "omardakkak98@gmail.com"  # receiver email address
-body = "Attendence File"  # email body
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+from email.mime.base import MIMEBase
+from email import encoders
 
-list_of_files = glob.glob('Attendance/*') # * means all if need specific format then *.csv
+email_user = 'ehang01.bendahan@gmail.com'
+email_password = 'dadi2019'
+email_send = 'omardakkak98@gmail.com'
+
+subject = 'Attendance'
+
+msg = MIMEMultipart()
+msg['From'] = email_user
+msg['To'] = email_send
+msg['Subject'] = subject
+
+body = 'This is the attendance'
+msg.attach(MIMEText(body,'plain'))
+
+##
+
+list_of_files = glob.glob('Attendance/*.csv') # * means all if need specific format then *.csv
 latest_file = max(list_of_files, key=os.path.getctime)
+latest_file = str(latest_file)
+##
+
+filename= latest_file
+attachment  =open(filename,'rb')
+
+part = MIMEBase('application','octet-stream')
+part.set_payload((attachment).read())
+encoders.encode_base64(part)
+part.add_header('Content-Disposition',"attachment; filename= "+filename)
+
+msg.attach(part)
+text = msg.as_string()
+server = smtplib.SMTP('smtp.gmail.com',587)
+server.starttls()
+server.login(email_user,email_password)
 
 
-latest_file = "/".join(latest_file.split("\\")) # attach the file
-
-
-# mail information
-yag = yagmail.SMTP("ehang01.bendahan@gmail.com", "dadi2019")
-
-# sent the mail
-yag.send(
-    to=receiver,
-    subject="Attendance Report",  # email subject
-    contents=body,  # email body
-    attachments=latest_file,  # file attached
-)
+server.sendmail(email_user,email_send,text)
+server.quit()
 
 print("mail has been sent successfully")
