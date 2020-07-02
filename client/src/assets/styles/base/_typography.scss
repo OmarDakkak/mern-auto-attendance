@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 991px) {
+  .container-sa {
+    padding-left: 20px;
+    padding-right: 20px;
+    min-width: 100%;
+  }
+}

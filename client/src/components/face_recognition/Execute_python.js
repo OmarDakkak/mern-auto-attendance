@@ -18,7 +18,7 @@ const Execute_python = () => {
             <p>description</p>                          
           </div>
           <div className="item_actions">
-            <Link to='/face_recognition' className='btn btn-danger'>
+            <Link to='/face_recognition' className='btn btn-primary'>
             Recognize/Attendance
             </Link>
           </div>
@@ -35,7 +35,7 @@ const Execute_python = () => {
             <p>Capture Faces</p>                          
           </div>
           <div className="item_actions">
-            <Link to='/Pfa_pres_capture' className='btn btn-danger'>
+            <Link to='/Pfa_pres_capture' className='btn btn-primary'>
             Capture Faces
             </Link>
           </div>
@@ -52,7 +52,7 @@ const Execute_python = () => {
             <p>Train Images</p>                          
           </div>
           <div className="item_actions">
-            <Link to='/pfa_train' className='btn btn-danger'>
+            <Link to='/pfa_train' className='btn btn-primary'>
             Train Images
             </Link>
           </div>
@@ -68,7 +68,7 @@ const Execute_python = () => {
             <p>Auto Mail</p>                          
           </div>
           <div className="item_actions">
-            <Link to='/pfa_auto_Mail' className='btn btn-danger'>
+            <Link to='/pfa_auto_Mail' className='btn btn-primary'>
             Auto Mail
             </Link>
           </div>

@@ -1,7 +1,5 @@
 import React, { Fragment, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Navbar from "./components/layout/Navbar";
-import Landing from "./components/layout/Landing";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import Dashboard from "./components/dashboard/Dashboard";
@@ -20,6 +18,14 @@ import store from "./store";
 import { loadUser } from "./actions/auth";
 import setAuthToken from "./utils/setAuthToken";
 
+import AOS from "aos";
+import $ from "jquery";
+
+import "aos/dist/aos.css";
+import "./assets/styles/main.scss";
+import Navbar from './components/layout/Navbar';
+import Land from './components/Land';
+
 if (localStorage.token) {
   setAuthToken(localStorage.token);
 }
@@ -27,14 +33,30 @@ if (localStorage.token) {
 const App = () => {
   useEffect(() => {
     store.dispatch(loadUser());
+    AOS.init({once: true});
+
+    let navElement = $("nav");
+
+    $(function () {
+        $(window).scrollTop() > navElement.innerHeight()
+            ? navElement.addClass("sticky")
+            : navElement.removeClass("sticky");
+    });
+    $(window).on("scroll", function () {
+        $(window).scrollTop() > navElement.innerHeight()
+            ? navElement.addClass("sticky")
+            : navElement.removeClass("sticky");
+    });
   }, []);
+
+
   return (
     <Provider store={store}>
       <Router>
         <Fragment>
-          <Navbar />
-          <Route exact path='/' component={Landing} />
-          <section className='container'>
+          <Navbar/>
+          <Route exact path='/' component={Land} />
+          <section>
             <Alert />
             <Switch>
               <Route exact path='/register' component={Register} />

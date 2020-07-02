@@ -8,7 +8,7 @@ from email import encoders
 
 email_user = 'ehang01.bendahan@gmail.com'
 email_password = 'dadi2019'
-email_send = 'omardakkak98@gmail.com'
+email_send = 'omardakkak2106@gmail.com'
 
 subject = 'Attendance'
 
@@ -21,7 +21,6 @@ body = 'This is the attendance'
 msg.attach(MIMEText(body,'plain'))
 
 ##
-
 list_of_files = glob.glob('Attendance/*.csv') # * means all if need specific format then *.csv
 latest_file = max(list_of_files, key=os.path.getctime)
 latest_file = str(latest_file)

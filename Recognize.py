@@ -18,7 +18,7 @@ def recognize_attendence():
     col_names = ['Id', 'Name', 'Date', 'Time']
     attendance = pd.DataFrame(columns=col_names)
     i=0
-    while i < 300:
+    while i < 30:
         ret, im = cam.read()
         gray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
         faces = faceCascade.detectMultiScale(gray, 1.2, 5)

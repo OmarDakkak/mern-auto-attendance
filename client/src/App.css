@@ -1,17 +1,17 @@
 /* Global Styles */
 :root {
-  --primary-color: #17a2b8;
+  --primary-color: #413bff;
   --dark-color: #343a40;
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
   --success-color: #28a745;
 }
 
-* {
+/* * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
+} */
 
 body {
   font-family: "Raleway", sans-serif;
@@ -25,15 +25,17 @@ a {
   color: var(--primary-color);
   text-decoration: none;
 }
+a:hover {
+  color:aliceblue;
+}
 
 ul {
   list-style: none;
 }
-
-img {
-  width: 100%;
+h1, h2, h3, h4, h5, h6, li{
+  margin-top: inherit;
+  margin-bottom: .5rem;
 }
-
 /* Utilities */
 .container {
   max-width: 1100px;
@@ -150,7 +152,7 @@ img {
 
 .alert {
   padding: 0.8rem;
-  margin: 1rem 0;
+  margin: 8rem 1rem 0 1rem;
   opacity: 0.9;
   background: var(--light-color);
   color: #333;
@@ -162,6 +164,9 @@ img {
 .alert-primary {
   background: var(--primary-color);
   color: #fff;
+}
+.btn-primary :hover{
+  color: aliceblue;
 }
 
 .btn-light,
@@ -176,7 +181,7 @@ img {
 .bg-dark,
 .badge-dark,
 .alert-dark {
-  background: var(--dark-color);
+  background: linear-gradient(62deg,#8400ff,#413bff);
   color: #fff;
 }
 
@@ -298,7 +303,7 @@ button {
   background: var(--light-color);
 }
 
-/* Navbar */
+/* navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -308,7 +313,7 @@ button {
   z-index: 1;
   width: 100%;
   top: 0;
-  border-bottom: solid 1px var(--primary-color);
+  background-color: linear-gradient(62deg,#8400ff,#413bff);
   opacity: 0.9;
 }
 
@@ -323,7 +328,7 @@ button {
 }
 
 .navbar a:hover {
-  color: var(--primary-color);
+  color: aliceblue;
 }
 
 .navbar .welcome span {
@@ -511,7 +516,7 @@ button {
     font-size: 1rem;
   }
 
-  /* Navbar */
+  /* navbar */
   .navbar {
     display: block;
     text-align: center;
