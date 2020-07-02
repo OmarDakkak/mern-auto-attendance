@@ -16,10 +16,12 @@ export default class pfa_train extends React.Component {
   render() {
     return (
       <Fragment>
-        <h1 className='large text-primary'>Training images</h1>
+      <section className="container">
+      <h1 className='large text-primary'>Training images</h1>
         <p className='lead'>
           <i /> {this.state.count === "Images are training..."?"Images are training...":"Images Trained Successfully!!"}
         </p>
+      </section>
       </Fragment>
     );
   }

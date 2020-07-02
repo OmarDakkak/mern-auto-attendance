@@ -25,6 +25,7 @@ list_of_files = glob.glob('Attendance/*.csv') # * means all if need specific for
 latest_file = max(list_of_files, key=os.path.getctime)
 latest_file = str(latest_file)
 ##
+print(latest_file)
 
 filename= latest_file
 attachment  =open(filename,'rb')
